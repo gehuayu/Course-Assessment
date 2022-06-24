@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gyuassess
+spec:
+  selector:
+    matchLabels:
+      app: gyuassess
+  template:
+    metadata:
+      labels:
+        app: gyuassess
+    spec:
+      containers:
+      - name: gyuassess
+        image: sbacr02.azurecr.io/gyuassess:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
