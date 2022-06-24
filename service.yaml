@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: gavinapp01
+  name: gyuassess
 spec:
   selector:
-    app: gavinapp01
+    app: gyuassess
   ports:
-  - port: 5178
-    targetPort: 5178
+  - port: 80
+    targetPort: 80
   type: LoadBalancer
